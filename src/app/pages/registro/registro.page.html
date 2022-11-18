@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button></ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registrarte</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formRegistro">
+        <ion-item>
+          <ion-label position="floating" style="text-align:center;"> Nombre </ion-label>
+          <ion-input formControlName="firstNameR"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" style="text-align:center;" > Apellido </ion-label>
+          <ion-input formControlName="lastNameR"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" style="text-align:center;" > Edad </ion-label>
+          <ion-input formControlName="ageR"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" style="text-align:center;" > Nombre Usuario </ion-label>
+          <ion-input formControlName="usernameR"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" style="text-align:center;" > Contraseña </ion-label>
+          <ion-input formControlName="passwordR" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"  style="text-align:center;" > Fecha Nacimiento </ion-label>
+          <ion-input formControlName="birthDateR"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> Genero </ion-label>
+          <ion-segment formControlName="genderR">
+            <ion-segment-button value="Masculino">
+              <ion-label>Masculino</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="Femenino">
+              <ion-label>Femenino</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="guardarDatos()" color="success">Registrarse</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
